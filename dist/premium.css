@@ -178,9 +178,9 @@ footer{padding-top:65px;padding-bottom:28px}.footer-main{padding-bottom:50px}.fo
 
 /* Named contact options beside the offer form. */
 .offer-contacts{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
-.offer-contacts .hero-contact{min-height:66px;padding:12px 15px;gap:10px;border:1px solid #ffffffb3;background:#ffffff04;color:#fff;white-space:nowrap;box-shadow:inset 0 0 0 1px #ffffff0d}
+.offer-contacts .hero-contact{justify-content:center;min-height:66px;padding:12px 15px;gap:10px;border:1px solid #ffffffb3;background:#ffffff04;color:#fff;white-space:nowrap;box-shadow:inset 0 0 0 1px #ffffff0d}
 .offer-contacts .hero-contact:hover{background:#ffffff16;border-color:#fff}
-.offer-contacts .hero-contact-details{display:flex;flex-direction:column;align-items:flex-start;gap:3px;font-size:14px;line-height:1.4}
+.offer-contacts .hero-contact-details{flex:0 0 auto;text-align:left;display:flex;flex-direction:column;align-items:flex-start;gap:3px;font-size:14px;line-height:1.4}
 .offer-contacts .hero-contact svg{display:block}
 .offer-contacts .hero-contact-details strong{font-weight:600}
 @media(max-width:400px){.offer-contacts{gap:10px}.offer-contacts .hero-contact{flex:1;padding:12px 8px;gap:7px}.offer-contacts .hero-contact svg{width:16px;height:16px}.offer-contacts .hero-contact-details strong{font-size:13px}}
@@ -251,3 +251,7 @@ footer{padding-top:65px;padding-bottom:28px}.footer-main{padding-bottom:50px}.fo
 /* Vector action arrows stay identical across platform fonts. */
 .action-arrow{display:block;width:18px;height:18px;flex:0 0 18px}
 .nav-cta{display:inline-flex;align-items:center;justify-content:space-between;gap:24px}
+
+/* Keep contact icons and text together in balanced mobile buttons. */
+@media(max-width:760px){.offer-contacts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.offer-contacts .hero-contact{min-width:0;padding:12px 8px;gap:9px}.offer-contacts .hero-contact svg{width:16px;height:16px}.offer-contacts .hero-contact-details strong{font-size:13px}}
+@media(max-width:360px){.offer-contacts{grid-template-columns:1fr}}
