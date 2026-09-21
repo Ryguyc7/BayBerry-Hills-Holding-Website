@@ -1,8 +1,21 @@
 const menuButton=document.querySelector('.menu-button');
 const navigation=document.querySelector('#navigation');
-menuButton.addEventListener('click',()=>{const open=menuButton.getAttribute('aria-expanded')!=='true';menuButton.setAttribute('aria-expanded',String(open));navigation.classList.toggle('open',open)});
-navigation.addEventListener('click',event=>{if(event.target.closest('a')){menuButton.setAttribute('aria-expanded','false');navigation.classList.remove('open')}});
-document.addEventListener('keydown',event=>{if(event.key==='Escape'&&navigation.classList.contains('open')){navigation.classList.remove('open');menuButton.setAttribute('aria-expanded','false');menuButton.focus()}});
+const setMenuOpen=open=>{
+  menuButton.setAttribute('aria-expanded',String(open));
+  navigation.classList.toggle('open',open);
+};
+const closeMenuOutside=event=>{
+  if(!navigation.contains(event.target)&&!menuButton.contains(event.target))setMenuOpen(false);
+};
+menuButton.addEventListener('click',()=>setMenuOpen(menuButton.getAttribute('aria-expanded')!=='true'));
+navigation.addEventListener('click',event=>{if(event.target.closest('a'))setMenuOpen(false)});
+document.addEventListener('pointerdown',closeMenuOutside);
+document.addEventListener('click',closeMenuOutside);
+document.addEventListener('focusin',closeMenuOutside);
+document.addEventListener('keydown',event=>{
+  if(event.key==='Escape'&&navigation.classList.contains('open')){setMenuOpen(false);menuButton.focus()}
+});
+window.matchMedia('(max-width: 1200px)').addEventListener('change',()=>setMenuOpen(false));
 const form=document.querySelector('#offer-form');
 const result=document.querySelector('#form-result');
 const formIntro=document.querySelector('#offer-form-intro');

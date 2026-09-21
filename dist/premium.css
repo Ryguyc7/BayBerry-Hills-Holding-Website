@@ -247,3 +247,7 @@ footer{padding-top:65px;padding-bottom:28px}.footer-main{padding-bottom:50px}.fo
 .result-contact:is(:hover,:focus-visible){background:#fbf7ee;border-color:#cea34d}
 .form-result .reset-form{display:inline-flex;align-items:center;min-height:44px;padding:8px 0;margin-top:16px;color:var(--muted);font-size:13px;text-underline-offset:4px}
 @media(max-width:400px){.form-result .result-heading{gap:12px}.form-result .result-check{width:36px;height:36px}.result-contact{gap:10px;padding:12px}}
+
+/* Vector action arrows stay identical across platform fonts. */
+.action-arrow{display:block;width:18px;height:18px;flex:0 0 18px}
+.nav-cta{display:inline-flex;align-items:center;justify-content:space-between;gap:24px}
