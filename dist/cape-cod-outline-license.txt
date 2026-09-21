@@ -1,0 +1,7 @@
+Cape Cod coastline
+Adapted from USA MA Cape Cod Barnstable County.svg by Grolltech.
+Source: https://commons.wikimedia.org/wiki/File:USA_MA_Cape_Cod_Barnstable_County.svg
+License: Creative Commons Attribution-ShareAlike 3.0 Unported
+https://creativecommons.org/licenses/by-sa/3.0/
+Changes: isolated the coastline path, cropped the viewport, changed the stroke to gold.
+This adapted SVG remains licensed under CC BY-SA 3.0.
