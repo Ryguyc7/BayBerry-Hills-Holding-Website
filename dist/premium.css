@@ -255,3 +255,6 @@ footer{padding-top:65px;padding-bottom:28px}.footer-main{padding-bottom:50px}.fo
 /* Keep contact icons and text together in balanced mobile buttons. */
 @media(max-width:760px){.offer-contacts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.offer-contacts .hero-contact{min-width:0;padding:12px 8px;gap:9px}.offer-contacts .hero-contact svg{width:16px;height:16px}.offer-contacts .hero-contact-details strong{font-size:13px}}
 @media(max-width:360px){.offer-contacts{grid-template-columns:1fr}}
+
+/* Prevent double-tap page zoom while preserving panning and pinch zoom. */
+html,body{touch-action:manipulation}
